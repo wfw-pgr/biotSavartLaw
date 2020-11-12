@@ -20,7 +20,7 @@ contains
     ! === Biot-Savart Law Calculation                    === !
     ! ====================================================== !
     do iB=1, nBpt
-       do iL=1, nLpt
+       do iL=1, nLpt-1
           dl(xp_:zp_)        = coilS(xp_:zp_,iL+1) - coilS(xp_:zp_,iL)
           rvec(xp_:zp_)      = bfield(xp_:zp_,iB) &
                &               - 0.5d0 * ( coilS(xp_:zp_,iL+1) + coilS(xp_:zp_,iL) )
